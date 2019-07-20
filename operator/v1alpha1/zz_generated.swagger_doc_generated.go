@@ -173,4 +173,38 @@ func (RepositoryDigestMirrors) SwaggerDoc() map[string]string {
 	return map_RepositoryDigestMirrors
 }
 
+var map_Support = map[string]string{
+	"": "Support contains global configuration related to monitoring the health of the cluster for support-related purposes. It allows you to control whether health information (also referred to as cluster telemetry) is reported to Red Hat support systems.",
+}
+
+func (Support) SwaggerDoc() map[string]string {
+	return map_Support
+}
+
+var map_SupportList = map[string]string{
+	"":         "SupportList lists the items in the Support CRD.",
+	"metadata": "Standard object's metadata.",
+}
+
+func (SupportList) SwaggerDoc() map[string]string {
+	return map_SupportList
+}
+
+var map_SupportSpec = map[string]string{
+	"":             "SupportSpec contains user-modifiable fields that impact how support systems interact with this cluster.",
+	"reportHealth": "reportHealth indicates whether the cluster is permitted to send health and critical configuration data to Red Hat support systems. This data is used to identify whether upgrades are successful, assist in triaging hardware or software failures in the core platform, and enable better support responses when failures do occur. It also makes the cluster visible via the cloud.redhat.com console for central insight into running clusters. The information reported to the support systems does not contain information about workloads unless directly related to a core subsystem malfunctioning.",
+}
+
+func (SupportSpec) SwaggerDoc() map[string]string {
+	return map_SupportSpec
+}
+
+var map_SupportStatus = map[string]string{
+	"": "SupportStatus will contain fields that the system chooses to report about how support is managed. It contains no fields now.",
+}
+
+func (SupportStatus) SwaggerDoc() map[string]string {
+	return map_SupportStatus
+}
+
 // AUTO-GENERATED FUNCTIONS END HERE
